@@ -1,21 +1,18 @@
-import Wallet from "./Wallet";
-import Transfer from "./Transfer";
+import Wallet from "./components/Wallet";
+import Transfer from "./components/Transfer";
+import Error from "./components/Error"
 import "./App.scss";
-import { useState } from "react";
+import { WalletDataContextProvider  } from './context/walletDataContext'
 
 function App() {
-  const [balance, setBalance] = useState(0);
-  const [address, setAddress] = useState("");
 
   return (
     <div className="app">
-      <Wallet
-        balance={balance}
-        setBalance={setBalance}
-        address={address}
-        setAddress={setAddress}
-      />
-      <Transfer setBalance={setBalance} address={address} />
+      <WalletDataContextProvider>
+        <Wallet />   
+        <Transfer />
+        <Error />
+      </WalletDataContextProvider>
     </div>
   );
 }

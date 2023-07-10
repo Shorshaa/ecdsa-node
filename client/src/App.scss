@@ -20,10 +20,12 @@ label {
   flex-wrap: wrap;
   gap: 12px;
   margin: 0 auto;
+ 
 }
 
 .container {
   flex-grow: 1;
+
   margin: 0 20px;
   background-color: #fff;
   border: 1px solid #cbd5e0;
@@ -65,8 +67,20 @@ input {
 }
 
 .wallet {
+
   display: flex;
   flex-direction: column;
+
+  flex-basis: 50%;
+
+  hr {
+    border: 0;
+    width: 90%;
+    color: black;
+    background-color: black;
+    height: 2px;
+    margin-top: 1em;
+    }
 
   .balance {
     text-transform: uppercase;
@@ -78,9 +92,125 @@ input {
     padding: 0.75rem;
     background-color: #f4f6f8;
   }
+
+  p {
+    font-size: .8em;
+    
+  }
 }
 
 .transfer {
   display: flex;
   flex-direction: column;
 }
+
+.errorContainer {
+  flex-grow: 1;
+
+  margin: 0 20px;
+  background-color: #fff;
+  border: 1px solid #cbd5e0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 0.375rem;
+  padding: 40px;
+  width: 100%;
+  height: fit-content;
+  min-height: 2em;
+}
+
+.error {
+  color: rgb(129, 26, 26);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  font-weight: bold;
+
+}
+
+.createAccount {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  visibility: visible;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1 / 1 / 2 / 3;
+  grid-template-columns: 0px min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  color: rgb(51, 51, 51);
+  box-sizing: border-box;
+}
+
+
+
+select {
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  border: 1px solid rgb(41, 18, 18);
+}
+
+select > option {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  background-color: rgb(247, 247, 247);
+  background-image: none;
+  font-size: 18px;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid rgb(41, 18, 18);
+}
+
+
+.table-wrapper {
+  position:relative;
+
+}
+
+.table-scroll {
+  height: 120px;
+  overflow-y: auto;  
+  margin-top: 18px;
+  position: relative;
+}
+
+.table-wrapper table {
+  width:100%;
+  border:3px solid black;
+  box-sizing: border-box
+}
+
+//.table-scroll table thead .text {
+.table-scroll thead {
+  position:sticky;   
+  top:-60px;
+  top:0;
+  z-index:2;
+  height:18px;
+  width:35%;
+  border:3px solid black;
+  background-color: #319795;
+  color: white;
+}
+
+.table-scroll tbody {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color:black;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
