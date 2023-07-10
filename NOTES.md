@@ -44,7 +44,9 @@ The UI was redesigned in order to avoid hardcoded accounts.
 #### <u>Wallet section</u>
 This section is composed of 2 parts:
  - the **<u>CREATE</u>** account: pressing the button CREATE will create a new instance of the walletAccount class. Optionnally a name can be provided
+   
   ![](./client/images/ECDSA%20Node_Wallet_Create.png)
+
   Upon the creation on the client side (that generates the private/public keys and its address) a request to the server is dispatch to create it as well and retreive its balance.
     > Note that in a normal use case, the initial balance would be 0 (zero). Since this is for testing purpses, a randm balance among predefined balances is assigned to the account on the server.
 
@@ -53,7 +55,8 @@ This section is composed of 2 parts:
     Once the creation is confirmed, the account will be displayed in the ACCOUNT LIST
 
  - the **<u>ACCOUNT LIST</u>**: Here all available accounts on the client side are displayed.
- This makes easy to see the "public" information of the avaiable accounts. 
+ This makes easy to see the "public" information of the avaiable accounts.
+
     ![](./client/images/ECDSA%20Node_Wallet_List.png)
   
 #### <u>Transfer section</u>
